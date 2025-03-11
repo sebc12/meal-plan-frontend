@@ -1,16 +1,14 @@
+import Link from "next/link";
 import TodaysMeal from "../components/TodaysMeal";
 import Weeklyplan from "../components/Weeklyplan";
+import Sidebar from "../components/Sidebar";
 
 export default async function Dashboard() {
 
   return (
     <div className="flex w-full h-screen">
-      <div className="bg-gray-100 pt-12 w-1/6 h-full flex flex-col items-center">
-        <h1>
-          Sidemenu
-        </h1>
-      </div>
-      <div className="p-8 w-full">
+      < Sidebar />
+      <div className="p-8 w-4/5">
             <div className="flex justify-between mb-8">
               <div>
                   <h1 className="text-3xl font-semibold">
