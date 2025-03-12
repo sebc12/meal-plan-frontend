@@ -2,19 +2,26 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <nav className="w-1/5 p-4 bg-gray-100 h-screen">
+    <div className="w-1/5 p-4 bg-gray-100 min-h-screen sticky top-0 hidden lg:block">
+    <nav >
       <ul>
         <li className="mb-2">
-          <Link href="/dashboard" className="block p-2 text-gray-800 hover:bg-gray-200 rounded">
+          <Link href="/" className="block p-2 text-gray-800 hover:bg-gray-200 rounded">
             Dashboard
           </Link>
         </li>
         <li className="mb-2">
-          <Link href="/dashboard/newWeek" className="block p-2 text-gray-800 hover:bg-gray-200 rounded">
+          <Link href="/newWeek" className="block p-2 text-gray-800 hover:bg-gray-200 rounded">
             New week
+          </Link>
+        </li>
+        <li className="mb-2">
+          <Link href="/newRecipe" className="block p-2 text-gray-800 hover:bg-gray-200 rounded">
+            New recipe
           </Link>
         </li>
       </ul>
     </nav>
+    </div>
   );
 }

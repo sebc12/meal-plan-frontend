@@ -17,6 +17,8 @@ export default function WeeklyplanClient({ week, plan }: Props) {
     return <p className="text-center text-gray-500">No meals available for this week.</p>;
   }
 
+  console.log(plan);
+
   return (
     <div className="w-full">
       <section>
