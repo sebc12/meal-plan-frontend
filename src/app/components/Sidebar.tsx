@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <div className="w-1/5 p-4 bg-gray-100 min-h-screen sticky top-0 hidden lg:block">
+    <div className="w-1/5 p-4 bg-gray-100 min-h-screen sticky top-0 ">
     <nav >
       <ul>
         <li className="mb-2">

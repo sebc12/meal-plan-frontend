@@ -1,4 +1,4 @@
-"use client";
+import RecipeForm from "../components/RecipeForm";
 
 export default function NewWeek() {
   return (
@@ -10,6 +10,7 @@ export default function NewWeek() {
             <p>Create a new recipe</p>
           </div>
         </div>
+        < RecipeForm />
       </div>
     </div>
   );

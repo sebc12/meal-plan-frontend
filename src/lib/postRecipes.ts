@@ -1,4 +1,4 @@
-export async function postRecipe(recipeData: any) {
+export async function postRecipes(recipeData: any) {
     const res = await fetch("http://127.0.0.1:8000/api/recipes", {
         method: "POST",
         headers: {
