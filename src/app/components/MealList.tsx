@@ -42,6 +42,7 @@ export default function MealList({ meals, today }: { meals: Meal[], today: strin
     <div className="w-80 md:w-1/4 bg-white h-full shadow-lg transform transition-transform translate-x-0 duration-500 ease-in-out">
       <div className="p-6">
         <h3 className="text-xl font-semibold">{selectedMeal?.recipe?.name}</h3>
+        <h3 className="text-xl font-semibold">{selectedMeal?.recipe?.description}</h3>
         <p className="mt-2 text-gray-600">Ingredients:</p>
         <ul className="list-disc pl-5 mt-2">
           {selectedMeal?.recipe?.ingredients.map((ingredient, index) => (

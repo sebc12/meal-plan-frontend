@@ -47,7 +47,7 @@ export default function WeeklyplanClient({ week, plan }: Props) {
                             onClick={() => meal.recipe && setSelectedMeal({ name: meal.recipe.name, ingredients: meal.recipe.ingredients.map(ingredient => ingredient.name) })}
                             className="cursor-pointer hover:underline"
                           >
-                            {meal?.recipe?.name ?? "No recipe"}
+                            {meal?.recipe?.name ?? "-"}
                           </button>
                         ) : (
                           "—"
@@ -68,6 +68,7 @@ export default function WeeklyplanClient({ week, plan }: Props) {
     <div className="w-80 md:w-1/4 bg-white h-full shadow-lg transform transition-transform translate-x-0 duration-500 ease-in-out">
       <div className="p-6">
         <h3 className="text-xl font-semibold">{selectedMeal.name}</h3>
+        
         <p className="mt-2 text-gray-600">Ingredients:</p>
         <ul className="list-disc pl-5 mt-2">
           {selectedMeal.ingredients.map((ingredient, index) => (
