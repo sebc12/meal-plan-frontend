@@ -29,7 +29,7 @@ export default function WeeklyplanClient({ week, plan }: Props) {
               <tr className="border-b">
                 <th className="py-2 text-left">Meal</th>
                 {weekDays.map((day, index) => (
-                  <th key={index} className="py-2 text-left">{day}</th>
+                  <th key={index} className="py-2 text-center">{day}</th>
                 ))}
               </tr>
             </thead>
@@ -45,7 +45,7 @@ export default function WeeklyplanClient({ week, plan }: Props) {
                         {meal ? (
                           <button
                             onClick={() => meal.recipe && setSelectedMeal({ name: meal.recipe.name, ingredients: meal.recipe.ingredients.map(ingredient => ingredient.name) })}
-                            className="cursor-pointer hover:underline"
+                            className="cursor-pointer hover:underline text-sm px-2 py-1"
                           >
                             {meal?.recipe?.name ?? "-"}
                           </button>

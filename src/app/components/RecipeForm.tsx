@@ -46,8 +46,8 @@ export default function NewWeekForm() {
       <input type="text" value={Description} onChange={(e) => setDescription(e.target.value)}  className="border border-gray-300 p-2 rounded"/>
       <label htmlFor="">Ingredients</label>
       {Ingredients.map((ingredient, index) => (
-        <div key={index} className="flex justify-between">
-          <div>
+        <div key={index} className="flex justify-between pb-4">
+          <div className="flex flex-col">
             <label htmlFor="">Ingredient*</label>
             <input
             type="text"
@@ -61,7 +61,7 @@ export default function NewWeekForm() {
             className="border border-gray-300 p-2 rounded"
           />
           </div>
-          <div>
+          <div className="flex flex-col">
             <label htmlFor="">Amount*</label>
             <input
             type="text"
@@ -76,7 +76,7 @@ export default function NewWeekForm() {
             
           />
           </div>
-          <div>
+          <div className="flex flex-col">
             <label htmlFor="">Unit*</label>
             <input
             type="text"

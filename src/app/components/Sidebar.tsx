@@ -7,7 +7,7 @@ export default function Sidebar() {
       <ul>
         <li className="mb-2">
           <Link href="/" className="block p-2 text-gray-800 hover:bg-gray-200 rounded">
-            Dashboard
+            Home
           </Link>
         </li>
         <li className="mb-2">

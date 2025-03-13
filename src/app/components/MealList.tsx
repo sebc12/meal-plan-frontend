@@ -23,13 +23,21 @@ export default function MealList({ meals, today }: { meals: Meal[], today: strin
             {mealTypes.map((mealType) => {
               const meal = meals.find((m) => m.day === today && m.type === mealType);
               return (
-                <tr
-                  key={mealType}
-                  className="border-b cursor-pointer hover:bg-gray-100"
-                  onClick={() => handleMealClick(meal)}
-                >
-                  <td className="py-2 font-semibold">{mealType}</td>
-                  <td className="py-2">{meal?.recipe?.name ?? "—"}</td>
+                <tr key={mealType} className="border-b hover:bg-gray-100">
+
+                  <td className="py-2 px-4 font-semibold">{mealType}</td>
+                  <td className="py-2 px-4 text-center">{meal?.recipe?.name ?? "---"}</td>
+                  <td className="py-2 px-4 text-right">
+                    {meal?.recipe && (
+                      <button 
+                        onClick={() => handleMealClick(meal)}
+                        className="bg-blue-500 text-white text-sm px-2 py-1 rounded cursor-pointer hover:bg-blue-600"
+                      >
+                        Ingredients
+                      </button>
+                    )}
+                  </td>
+
                 </tr>
               );
             })}
@@ -42,7 +50,7 @@ export default function MealList({ meals, today }: { meals: Meal[], today: strin
     <div className="w-80 md:w-1/4 bg-white h-full shadow-lg transform transition-transform translate-x-0 duration-500 ease-in-out">
       <div className="p-6">
         <h3 className="text-xl font-semibold">{selectedMeal?.recipe?.name}</h3>
-        <h3 className="text-xl font-semibold">{selectedMeal?.recipe?.description}</h3>
+        <h3 className="">{selectedMeal?.recipe?.description}</h3>
         <p className="mt-2 text-gray-600">Ingredients:</p>
         <ul className="list-disc pl-5 mt-2">
           {selectedMeal?.recipe?.ingredients.map((ingredient, index) => (
