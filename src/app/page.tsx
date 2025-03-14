@@ -9,7 +9,7 @@ export default async function Dashboard() {
             <div className="flex justify-between mb-8">
               <div>
                   <h1 className="text-3xl font-semibold">
-                    Welcome to foodieplanner
+                    Welcome to the food planner
                   </h1>
                   <p>
                     The simple meal planner
